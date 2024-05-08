@@ -10,7 +10,7 @@ def r0_1():
         print('you acc')
     if input()=='scream':
         print('nobody hears you and you wither away.\nGAME OVER!')
-        quit()
+       # quit()
 def r0_3():
     print('') 
 def r1_1():
