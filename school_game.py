@@ -10,7 +10,7 @@ def r0_1():
         print('you acc')
     if input()=='scream':
         print('nobody hears you and you wither away.\nGAME OVER!')
-       # quit()
+       quit()
 def r0_3():
     print('') 
 def r1_1():
@@ -19,10 +19,10 @@ def r1_1():
         print('you picked it up.')
 def ain():
     print('welcome to my game!\nType start to begin') 
-if input()=="start":
-    print('make your choice on which way to go. \nLeft or right')
-if input()=='left':
-    r1_1()
-if input()=='right':
-    r0_1()
+    if input()=="start":
+        print('make your choice on which way to go. \nLeft or right')
+    if input()=='left':
+        r1_1()
+    if input()=='right':
+        r0_1()
 ain()
