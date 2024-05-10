@@ -17,7 +17,7 @@ def r1_1():
     print('you found money on the ground. \nWhat do you do?: \npick it up \nburn it \nleave it')
     if input()=="pick it up":
         print('you picked it up.')
-def ain():
+def main():
     print('welcome to my game!\nType start to begin') 
     if input()=="start":
         print('make your choice on which way to go. \nLeft or right')
@@ -25,4 +25,4 @@ def ain():
         r1_1()
     if input()=='right':
         r0_1()
-ain()
+main()
