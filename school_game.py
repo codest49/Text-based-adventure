@@ -1,7 +1,7 @@
 #import random
 def r0_1():
     print('you are hit over the head knocking you out')
-    print("You wake up in a dark room. You look around and you can't see anything.\nWhat do you do?")
+    print('You wake up in a dark room. You look around and you can\'t see anything.\nWhat do you do?')
     print('check your pockets\nhit the wall\nscream')
     if input()=='check your pockets':
         print('you find nothing. your pockets are empty.\n what do you do?')
