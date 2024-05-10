@@ -1,4 +1,4 @@
-#import random
+import random
 def r0_1():
     print('you are hit over the head knocking you out')
     print('You wake up in a dark room. You look around and you can\'t see anything.\nWhat do you do?')
@@ -10,7 +10,7 @@ def r0_1():
         print('you acc')
     if input()=='scream':
         print('nobody hears you and you wither away.\nGAME OVER!')
-       quit()
+        quit()
 def r0_3():
     print('') 
 def r1_1():
