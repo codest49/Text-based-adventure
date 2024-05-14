@@ -27,11 +27,11 @@ def r0_1():
     print('Roll to the parachute and put it on')
     print('Try to hold on')
     choice_2=input().lower()
-    if choice_2=='Crawl to the parachute and put it on':
+    if choice_2=='crawl to the parachute and put it on':
         print('You aren\'t fast enough and you fall off the plane without a parachute.')
         print('You hit the ground and go splat.\nYOU DIED')
         quit()
-    elif choice_2=='Roll to the parachute and put it on':
+    elif choice_2=='roll to the parachute and put it on':
         print('You grab the parachute right before you fall off.')
         print('While you are falling you put the parachute on and pull the ripcord.')
         print('You land successfully.')
@@ -59,5 +59,4 @@ def main():
         elif direction == 'right':
             if r0_1():
                 r0_2()
-
 main()
