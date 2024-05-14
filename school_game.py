@@ -22,14 +22,32 @@ def r0_1():
     print('You try to go back inside but the door closed behind you.')
     print('You here over an intercom "This is the captain speeking we are about to do a barrel roll."')
     print('You realize there is a parachute straped to the side of the plane.')
-    print('')
-def r0_3():
+    print('You can\'t reach the parachute easily.')
+    print('What do you do?\nCrawl to the parachute and put it on')
+    print('Roll to the parachute and put it on')
+    print('Try to hold on')
+    choice_2=input().lower()
+    if choice_2=='Crawl to the parachute and put it on':
+        print('You aren\'t fast enough and you fall off the plane without a parachute.')
+        print('You hit the ground and go splat.\nYOU DIED')
+        quit()
+    elif choice_2=='Roll to the parachute and put it on':
+        print('You grab the parachute right before you fall off.')
+        print('While you are falling you put the parachute on and pull the ripcord.')
+        print('You land successfully.')
+    elif choice_2=='try to hold on':
+        print('You manage to hold on until the pilot drops the drop tanks.')
+        print('One of the the drop tanks hit you in the head knocking you off and unconscious.')
+        print('You hit the ground and go splat.\nYOU DIED')
+        quit()
+    return True
+def r0_2():
     print('') 
 def r1_1():
     #print('you found money on the ground. \nWhat do you do?: \npick it up \nburn it \nleave it')
     #if input()=="pick it up":
     #    print('you picked it up.')
-    print("")
+    print('')
 def main():
     print('Welcome to my game!\nType "start" to begin.') 
     start_choice = input().lower()
@@ -39,5 +57,7 @@ def main():
         if direction == 'left':
             r1_1()
         elif direction == 'right':
-            r0_1()
+            if r0_1():
+                r0_2()
+
 main()
