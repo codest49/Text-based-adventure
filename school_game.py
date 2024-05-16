@@ -59,4 +59,8 @@ def main():
         elif direction == 'right':
             if r0_1():
                 r0_2()
+#        if r0_1==False or r1_1==False:
+#            restart_choice=input("would you like to restart? yes, no")
+#            if restart_choice=='yes':
+            
 main()
