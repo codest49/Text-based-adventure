@@ -11,12 +11,12 @@ def r0_1():
             print('You accidentally hit a secret panel and it opens letting you out.')
         elif choice_1_1=='scream':
             print('nobody hears you and you wither away.\nGAME OVER!')
-            quit()
     elif choice_1=='hit the wall':
         print('You accidentally hit a secret panel and it opens letting you out.')
     elif choice_1=='scream':
         print('nobody hears you and you wither away.\nGAME OVER!')
-        quit()
+    else:
+        return False
     print('You are immediately blinded by the light shining through the doorway.')
     print('You walk through the doorway and almost fall off a plane wing and you realize you are at on\nthe wing of a plane at the crusing altude of a jet liner.')
     print('You try to go back inside but the door closed behind you.')
@@ -30,7 +30,7 @@ def r0_1():
     if choice_2=='crawl to the parachute and put it on':
         print('You aren\'t fast enough and you fall off the plane without a parachute.')
         print('You hit the ground and go splat.\nYOU DIED')
-        quit()
+        return False
     elif choice_2=='roll to the parachute and put it on':
         print('You grab the parachute right before you fall off.')
         print('While you are falling you put the parachute on and pull the ripcord.')
@@ -39,7 +39,7 @@ def r0_1():
         print('You manage to hold on until the pilot drops the drop tanks.')
         print('One of the the drop tanks hit you in the head knocking you off and unconscious.')
         print('You hit the ground and go splat.\nYOU DIED')
-        quit()
+        return False
     return True
 def r0_2():
     print('') 
@@ -49,18 +49,19 @@ def r1_1():
     #    print('you picked it up.')
     print('')
 def main():
-    print('Welcome to my game!\nType "start" to begin.') 
-    start_choice = input().lower()
-    if start_choice == "start":
-        print('Make your choice on which way to go.\nLeft or right?')
-        direction = input().lower()
-        if direction == 'left':
-            r1_1()
-        elif direction == 'right':
-            if r0_1():
-                r0_2()
-#        if r0_1==False or r1_1==False:
-#            restart_choice=input("would you like to restart? yes, no")
-#            if restart_choice=='yes':
-            
+    while True:
+        print('Welcome to my game!\nType "start" to begin.') 
+        start_choice = input().lower()
+        if start_choice == "start":
+            print('Make your choice on which way to go.\nLeft or right?')
+            direction = input().lower()
+            if direction == 'left':
+                r1_1()
+            elif direction == 'right':
+                if r0_1():
+                    r0_2()
+            end_choice=input('Would you like to keep playing?(y/n)').lower()
+            if end_choice=='n':
+                break
 main()
+print('Thanks for playing.')
