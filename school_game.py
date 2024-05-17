@@ -16,6 +16,7 @@ def r0_1():
     elif choice_1=='scream':
         print('nobody hears you and you wither away.\nGAME OVER!')
     else:
+        print('Invalid choice.')
         return False
     print('You are immediately blinded by the light shining through the doorway.')
     print('You walk through the doorway and almost fall off a plane wing and you realize you are at on\nthe wing of a plane at the crusing altude of a jet liner.')
@@ -40,9 +41,13 @@ def r0_1():
         print('One of the the drop tanks hit you in the head knocking you off and unconscious.')
         print('You hit the ground and go splat.\nYOU DIED')
         return False
+    else:
+        print('Invalid choice.')
+        return False
     return True
 def r0_2():
-    print('') 
+    print('Your lucky you almost hit a tree but you landed safely.')
+    print('You also almost landed on a landmine.')
 def r1_1():
     #print('you found money on the ground. \nWhat do you do?: \npick it up \nburn it \nleave it')
     #if input()=="pick it up":
