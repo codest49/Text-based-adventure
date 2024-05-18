@@ -2,11 +2,11 @@ import random
 def r0_1():
     print('you are hit over the head knocking you out')
     print('You wake up in a dark room. You look around and you can\'t see anything.\nWhat do you do?')
-    choice_1=input('check your pockets\nhit the wall\nscream\n').lower()
+    choice_1=input('check your pockets\nhit the wall\nscream\n').lower().strip().
     if choice_1=='check your pockets':
         print('you find nothing. your pockets are empty.\n what do you do?')
         print('hit the wall\nscream')
-        choice_1_1=input().lower()
+        choice_1_1=input().lower().strip()
         if choice_1_1=='hit the wall':
             print('You accidentally hit a secret panel and it opens letting you out.')
         elif choice_1_1=='scream':
@@ -27,7 +27,7 @@ def r0_1():
     print('What do you do?\nCrawl to the parachute and put it on')
     print('Roll to the parachute and put it on')
     print('Try to hold on')
-    choice_2=input().lower()
+    choice_2=input().lower().strip()
     if choice_2=='crawl to the parachute and put it on':
         print('You aren\'t fast enough and you fall off the plane without a parachute.')
         print('You hit the ground and go splat.\nYOU DIED')
@@ -56,16 +56,16 @@ def r1_1():
 def main():
     while True:
         print('Welcome to my game!\nType "start" to begin.') 
-        start_choice = input().lower()
+        start_choice = input().lower().strip()
         if start_choice == "start":
             print('Make your choice on which way to go.\nLeft or right?')
-            direction = input().lower()
+            direction = input().lower().strip()
             if direction == 'left':
                 r1_1()
             elif direction == 'right':
                 if r0_1():
                     r0_2()
-            end_choice=input('Would you like to keep playing?(y/n)').lower()
+            end_choice=input('Would you like to keep playing?(y/n)').lower().strip().strip()
             if end_choice=='n':
                 break
 main()
