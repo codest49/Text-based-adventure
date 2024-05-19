@@ -2,7 +2,7 @@ import random
 def r0_1():
     print('you are hit over the head knocking you out')
     print('You wake up in a dark room. You look around and you can\'t see anything.\nWhat do you do?')
-    choice_1=input('check your pockets\nhit the wall\nscream\n').lower().strip().
+    choice_1=input('check your pockets\nhit the wall\nscream\n').lower().strip()
     if choice_1=='check your pockets':
         print('you find nothing. your pockets are empty.\n what do you do?')
         print('hit the wall\nscream')
@@ -65,7 +65,7 @@ def main():
             elif direction == 'right':
                 if r0_1():
                     r0_2()
-            end_choice=input('Would you like to keep playing?(y/n)').lower().strip().strip()
+            end_choice=input('Would you like to keep reastart?(y/n)').lower().strip()
             if end_choice=='n':
                 break
 main()
